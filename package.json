@@ -3,11 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run:chrome": "cypress run --browser chrome",
+    "cy:run:headed": "cypress run --headed",
+    "cy:run:record": "cypress run --record --key e56d4e4b-515f-4ba7-8817-ce2ed95fd30b",
+    "test": "npm run cy:run",
+    "test:ci": "npm run cy:run:record"
   },
-  "author": "",
+  "author": "Winston Castillo",
   "license": "ISC",
-  "description": "",
+  "description": "Automatización de pruebas E2E para funcionalidades de blog usando Cypress",
   "devDependencies": {
     "cypress": "^15.10.0"
   }
