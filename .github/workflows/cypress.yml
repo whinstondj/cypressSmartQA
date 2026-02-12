@@ -5,6 +5,9 @@ on:
     branches: [ main, develop ]
   pull_request:
     branches: [ main ]
+  schedule:
+    # Ejecutar a las 9:30 PM hora Ecuador (UTC-5) = 2:30 AM UTC
+    - cron: '30 2 * * *'
 
 jobs:
   cypress-run:
